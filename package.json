@@ -1,7 +1,7 @@
 {
-  "name": "kicache",
+  "name": "kokijs",
   "version": "0.0.1",
-  "description": "Js client utility to cache requests",
+  "description": "Js client utility to make and cache requests",
   "main": "index.js",
   "author": "Aboubakar Sidik Faha <me@aboubak.art>",
   "license": "MIT",
@@ -14,5 +14,13 @@
   },
   "dependencies": {
     "axios": "^1.6.8"
-  }
+  },
+  "keywords": [
+    "http",
+    "request",
+    "http cache",
+    "axios",
+    "http client"
+  ],
+  "repository": "https://github.com/sidikfaha/kokijs"
 }

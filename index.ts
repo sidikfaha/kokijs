@@ -1,7 +1,7 @@
 import { Axios, AxiosRequestConfig } from "axios";
 import { hash, getCache } from "./helpers";
 
-export class Kicache {
+export class Koki {
   private _isCacheActive: boolean = false;
   private _axios: Axios;
 
@@ -9,7 +9,7 @@ export class Kicache {
     this._axios = new Axios(config);
   }
 
-  cache(): Kicache {
+  cache(): Koki {
     this._isCacheActive = true;
     return this;
   }
