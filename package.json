@@ -1,0 +1,26 @@
+{
+  "name": "kokijs",
+  "version": "0.0.1",
+  "description": "Js client utility to make and cache requests",
+  "main": "index.js",
+  "author": "Aboubakar Sidik Faha <me@aboubak.art>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "axios": "^1.6.8"
+  },
+  "keywords": [
+    "http",
+    "request",
+    "http cache",
+    "axios",
+    "http client"
+  ],
+  "repository": "https://github.com/sidikfaha/kokijs"
+}
