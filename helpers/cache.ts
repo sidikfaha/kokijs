@@ -1,11 +1,18 @@
-import { ICache, CacheOptions } from "../types";
+export interface CacheOptions {
+  lifetime: number;
+}
+
+export interface ICache<T> {
+  data: T;
+  expiresAt: number;
+}
 
 export const getCache = <T>(key: string) => {
   const value = sessionStorage.getItem(key);
   if (!value) return null;
 
   const cache = JSON.parse(value) as ICache<T>;
-  if (Date.now() > cache.expire) {
+  if (Date.now() > cache.expiresAt) {
     sessionStorage.removeItem(key);
     return null;
   }
@@ -16,12 +23,12 @@ export const getCache = <T>(key: string) => {
 export const setCache = <T>(
   key: string,
   value: NonNullable<T>,
-  { retention = 5 }: CacheOptions
+  { lifetime: retention = 5 }: CacheOptions
 ) => {
   if (!value) return;
   const cacheObject: ICache<T> = {
     data: value,
-    expire: Date.now() + retention * 60 * 1000,
+    expiresAt: Date.now() + retention * 60 * 1000,
   };
   sessionStorage.setItem(key, JSON.stringify(cacheObject));
 };
